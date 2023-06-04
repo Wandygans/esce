@@ -77,8 +77,6 @@ quotesAnime,
 katabijak,
 wikimedia,
 gempa,
-ytmp4, 
-ytmp3,
 pinterest,
 wiki,
 googleImage,
@@ -4478,7 +4476,7 @@ conn.slots = conn.slots ? conn.slots : {}
         let spins3 = (spin3 == 1 ? '🦁' : spin3 == 2 ? '🐼' : spin3 == 3 ? '🐷' : spin3 == 4 ? '🐮' : spin3 == 5 ? '🦊' : '')
         let spins4 = (spin4 == 1 ? '🦁' : spin4 == 2 ? '🐼' : spin4 == 3 ? '🐷' : spin4 == 4 ? '🐮' : spin4 == 5 ? '🦊' : '')
         let spins5 = (spin5 == 1 ? '🦁' : spin5 == 2 ? '🐼' : spin5 == 3 ? '🐷' : spin5 == 4 ? '🐮' : spin5 == 5 ? '🦊' : '')
-        let spins6 = (spin6 == 1 ? '🦁' : spin6 == 2 ? '🐼' : spin6 == 3 ? '🐷' : spin6 == 4 ? '🐮' : spin6 == 5 ? '🦊' : '')
+        let spins6 = (spin6 == 1 ? '🦁' : spin6 == 2 ? '??' : spin6 == 3 ? '🐷' : spin6 == 4 ? '🐮' : spin6 == 5 ? '🦊' : '')
         let spins7 = (spin7 == 1 ? '🦁' : spin7 == 2 ? '🐼' : spin7 == 3 ? '🐷' : spin7 == 4 ? '🐮' : spin7 == 5 ? '🦊' : '')
         let spins8 = (spin8 == 1 ? '🦁' : spin8 == 2 ? '🐼' : spin8 == 3 ? '🐷' : spin8 == 4 ? '🐮' : spin8 == 5 ? '🦊' : '')
         let spins9 = (spin9 == 1 ? '🦁' : spin9 == 2 ? '🐼' : spin9 == 3 ? '🐷' : spin9 == 4 ? '🐮' : spin9 == 5 ? '🦊' : '' )
@@ -4907,7 +4905,7 @@ db.data.users[m.sender].limit -= 1 // -1 limit
 if(!text) return m.reply(`Example: ${prefix + command} https://youtu.be/NhIIHLpRa_U`)
 m.reply(mess.wait)
 try {
-data = await ytmp4(text)
+data = await gempa(text)
 conn.sendMessage(m.chat, { video: { url: data.result }, mimetype: 'video/mp4', fileName: `${data.title}.mp4`, caption: `⭔ Title: ${data.title}\n⭔Quality: ${data.quality}\n⭔Channel: ${data.channel}\n⭔UploadDate: ${data.uploadDate}\n⭔Views: ${data.views}\n⭔Desc: ${data.desc}` }, { quoted: m })
 } catch(e){
 error(util.format(e), m, m.chat)
@@ -4921,7 +4919,7 @@ db.data.users[m.sender].limit -= 1 // -1 limit
 if(!text) return m.reply(`Example: ${prefix + command} https://youtu.be/NhIIHLpRa_U`)
 m.reply(mess.wait)
 try {
-data = await ytmp3(text)
+data = await gempa(text)
 txt = `⭔ Title: ${data.title}
 ⭔Size: ${data.size}
 ⭔Channel: ${data.channel}
