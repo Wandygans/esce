@@ -3697,7 +3697,7 @@ m.reply(tekss.trim())
 error(util.format(e), m, m.chat)
 }
 break
-case 'ytsearch': {
+/*case 'ytsearch': {
 if (!db.data.users[m.sender].registered) return m.reply(mess.register)
 if (db.data.users[m.sender].Banneduser) return m.reply(mess.banned)
 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
@@ -3713,6 +3713,7 @@ db.data.users[m.sender].limit -= 1 // -1 limit
                 conn.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
             break
+*/
 case 'ssweb':
 if (!db.data.users[m.sender].registered) return m.reply(mess.register)
 if (db.data.users[m.sender].Banneduser) return m.reply(mess.banned)
