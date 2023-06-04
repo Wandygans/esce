@@ -107,8 +107,7 @@ console.log(`Pakai Versi v${version.join(".")}, Terbaru: ${isLatest}`);
 
 store.bind(conn.ev)
 
-const PORT = process.env.PORT || 3003
-if (opts['server']) require('./server')(conn, PORT)
+
     
 conn.ev.on('group-participants.update', async (anu) => {
 console.log(anu)
